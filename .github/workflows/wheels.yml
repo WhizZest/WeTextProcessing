@@ -63,6 +63,7 @@ jobs:
           python -m build
 
       - name: Publish on pypi.org
+        if: github.ref == 'refs/heads/master' && github.repository == 'wenet-e2e/WeTextProcessing'
         env:
           TWINE_USERNAME: __token__
           TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
