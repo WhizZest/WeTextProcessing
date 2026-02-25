@@ -31,7 +31,9 @@ wetn = "tn.main:main"
 weitn = "itn.main:main"
 
 [project.optional-dependencies]
-test = ["pytest"]
+test = [
+    "pytest",
+    "flake8"]
 dev = [
     # Development tools
     "flake8",
